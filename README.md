@@ -8,7 +8,7 @@ Each song in the database has an AI-generated description of how it feels to lis
 
 - Node.js 18+
 - A MongoDB Atlas cluster (free M0 works)
-- A Voyage AI API key (free tier): https://dash.voyageai.com
+- A Voyage AI API key (See how to get started with Voyage AI [here](https://www.mongodb.com/products/platform/ai-search-and-retrieval/getting-started))
 
 ## Setup
 
