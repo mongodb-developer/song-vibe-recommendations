@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #777;
+  font-size: 1rem;
+}
+
+/* ── Search form ── */
+
+#search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#query-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #e8e8e8;
+  outline: none;
+}
+
+#query-input:focus {
+  border-color: #555;
+}
+
+#query-input::placeholder {
+  color: #555;
+}
+
+#search-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #00ed64;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background: #00c853;
+}
+
+/* ── Token note ── */
+
+.token-note {
+  font-size: 1rem;
+  color: #989898;
+  text-align: center;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+/* ── Spinner ── */
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #2a2a2a;
+  border-top-color: #00ed64;
+  border-radius: 50%;
+  margin: 2rem auto;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Result cards ── */
+
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-color-bar {
+  height: 6px;
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.card-artist {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: #252525;
+  color: #999;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.fma-link {
+  font-size: 0.8rem;
+  color: #00ed64;
+  text-decoration: none;
+}
+
+.fma-link:hover {
+  text-decoration: underline;
+}
+
+/* ── State messages ── */
+
+.message {
+  text-align: center;
+  color: #555;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.message.error {
+  color: #e05252;
+}

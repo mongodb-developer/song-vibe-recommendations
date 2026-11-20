@@ -1,0 +1,6 @@
+MONGODB_URI=<MongoDB URI>
+MONGODB_DATABASE=song_vibe_search
+
+# Voyage AI
+VOYAGE_API_KEY=<API Key>
+

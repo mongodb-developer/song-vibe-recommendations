@@ -1,0 +1,21 @@
+{
+  "name": "song-vibe-search-mongoose",
+  "version": "1.0.0",
+  "description": "MongoDB Vector Search song recommendation app (Mongoose version)",
+  "scripts": {
+    "seed": "ts-node seed/seed.ts",
+    "dev": "ts-node src/server.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.12.0",
+    "voyageai": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
