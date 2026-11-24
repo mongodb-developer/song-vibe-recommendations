@@ -18,7 +18,7 @@ async function createVectorSearchIndex(): Promise<void> {
           {
             type: "vector",
             path: "embedding",
-            numDimensions: 512,
+            numDimensions: 1024,
             similarity: "cosine",
           },
         ],

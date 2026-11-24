@@ -33,7 +33,7 @@ const songSchema = new Schema(
     genre_top: { type: String, default: "" },
     genres: { type: [String], default: [] },
     vibe_description: { type: String, required: true },
-    embedding: { type: [Number], required: true }, // 512 dimensions (voyage-3-lite)
+    embedding: { type: [Number], required: true }, // 1024 dimensions (voyage-4-lite)
     seeded_at: { type: Date, default: Date.now },
   },
   {

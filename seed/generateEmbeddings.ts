@@ -2,9 +2,9 @@ import "dotenv/config";
 import { VoyageAIClient } from "voyageai";
 import type { TrackWithVibe } from "./generateVibeDescriptions";
 
-// voyage-3-lite produces 512-dimensional vectors.
+// voyage-4-lite produces 1024-dimensional vectors.
 // numDimensions in your Atlas Vector Search index must match this value.
-const EMBEDDING_MODEL = "voyage-3-lite";
+const EMBEDDING_MODEL = "voyage-4-lite";
 
 export interface TrackWithEmbedding extends TrackWithVibe {
   embedding: number[];
@@ -18,7 +18,7 @@ export async function generateEmbeddings(
     throw new Error("Missing VOYAGE_API_KEY in environment");
   }
 
-  const voyage = new VoyageAIClient({ apiKey: VOYAGE_API_KEY });
+  const voyage = new VoyageAIClient({ apiKey: VOYAGE_API_KEY, environment: "https://ai.mongodb.com/v1" });
 
   console.log(`\nGenerating embeddings for ${tracks.length} tracks...`);
 

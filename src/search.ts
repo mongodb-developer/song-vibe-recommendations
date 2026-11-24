@@ -21,12 +21,12 @@ export const client = new MongoClient(MONGODB_URI, {
   appName: "devrel-github-javascript-music-recommender",
 });
 
-const voyage = new VoyageAIClient({ apiKey: VOYAGE_API_KEY });
+const voyage = new VoyageAIClient({ apiKey: VOYAGE_API_KEY, environment: "https://ai.mongodb.com/v1" });
 
 const DB_NAME = process.env.MONGODB_DATABASE ?? "song_vibe_search";
 const COLLECTION_NAME = "songs";
 export const VECTOR_INDEX = "vibe_vector_index";
-const EMBEDDING_MODEL = "voyage-3-lite";
+const EMBEDDING_MODEL = "voyage-4-lite";
 export const NUM_RESULTS = 5;
 export const NUM_CANDIDATES = 100;
 

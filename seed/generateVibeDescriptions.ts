@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import type { RawTrack } from "./fetchTracks";
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = "gemini-3-flash-preview";
+const GEMINI_MODEL = "gemini-3.5-flash-lite";
 const BATCH_SIZE = 50;
 
 export interface TrackWithVibe extends RawTrack {
